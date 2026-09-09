@@ -3,7 +3,8 @@
 ## Unreleased
 
 * Parse and write `MULTIPOINT` with a mix of `EMPTY` and non-empty members, e.g. `MULTIPOINT(1 2, EMPTY)`. (#111)
-* Your change here.
+* Perf: tokenize from the input byte slice rather than allocating a `String`
+  per token; parsing is ~2x faster.
 
 ## 0.14.0 - 2025-05-08
 
