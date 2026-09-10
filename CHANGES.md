@@ -5,6 +5,8 @@
 * Parse and write `MULTIPOINT` with a mix of `EMPTY` and non-empty members, e.g. `MULTIPOINT(1 2, EMPTY)`. (#111)
 * Perf: tokenize from the input byte slice rather than allocating a `String`
   per token; parsing is ~2x faster.
+* Bound `GEOMETRYCOLLECTION` nesting depth to prevent stack overflow when parsing untrusted WKT.
+* Your change here.
 
 ## 0.14.0 - 2025-05-08
 
